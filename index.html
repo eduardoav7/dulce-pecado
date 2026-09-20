@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dulce Pecado | Postres que enamoran</title>
-    <!-- Tailwind CSS para un diseño moderno y responsivo -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -14,131 +14,270 @@
 <body class="bg-[#FFF9F5] text-gray-800">
 
     <!-- Navegación -->
-    <nav class="bg-white/80 backdrop-md shadow-sm sticky top-0 z-50 px-6 py-4 flex justify-between items-center">
+    <nav class="bg-white/90 backdrop-md shadow-sm sticky top-0 z-50 px-6 py-4 flex justify-between items-center">
         <div class="flex items-center space-x-3">
             <div class="w-10 h-10 bg-[#FFD1DC] rounded-full flex items-center justify-center font-bold text-[#7C3F00]">DP</div>
             <span class="text-xl font-bold text-[#5A2E0B]">Dulce Pecado</span>
         </div>
         <div class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
             <a href="#inicio" class="hover:text-[#D94F70]">Inicio</a>
-            <a href="#proyecto" class="hover:text-[#D94F70]">Proyecto Escolar (4Ps)</a>
-            <a href="#menu" class="hover:text-[#D94F70]">Menú</a>
+            <a href="#proyecto" class="hover:text-[#D94F70]">Proyecto (4Ps)</a>
+            <a href="#menu" class="hover:text-[#D94F70]">Menú & Precios</a>
+            <a href="#pedido" class="hover:text-[#D94F70]">Pedir en Línea</a>
+            <a href="#equipo" class="hover:text-[#D94F70]">Conócenos</a>
             <a href="#presupuesto" class="hover:text-[#D94F70]">Presupuesto</a>
-            <a href="#cupon" class="text-[#D94F70] font-bold">¡Obtén tu Cupón!</a>
+            <a href="#cupon" class="text-[#D94F70] font-bold">Cupón</a>
         </div>
     </nav>
 
-    <!-- Sección Inicio -->
+    <!-- Inicio -->
     <header id="inicio" class="relative bg-[#FFD1DC]/30 py-20 px-6 text-center overflow-hidden">
         <div class="max-w-3xl mx-auto space-y-6">
             <div class="inline-block bg-white px-4 py-1.5 rounded-full text-xs font-semibold text-[#D94F70] shadow-sm uppercase tracking-wider">
                 Proyecto Escolar de Emprendimiento
             </div>
-            <h1 class="text-4xl md:text-6xl font-extrabold text-[#5A2E0B]">
-                Dulce Pecado
-            </h1>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-[#5A2E0B]">Dulce Pecado</h1>
             <p class="text-xl text-[#7C3F00] font-medium italic">"Postres que enamoran"</p>
             <p class="text-gray-600 max-w-lg mx-auto text-sm md:text-base">
-                Repostería artesanal elaborada con los más altos estándares de calidad, diseñada para conquistar los paladares más exigentes de la comunidad escolar.
+                Repostería artesanal elaborada con amor, calidad y lista para ordenar en línea sin hacer filas.
             </p>
             <div class="flex justify-center gap-4 pt-4">
-                <a href="#menu" class="bg-[#D94F70] hover:bg-[#c23f5e] text-white font-medium px-6 py-3 rounded-xl shadow-lg transition">Ver Menú</a>
-                <a href="#cupon" class="bg-white border border-[#D94F70] text-[#D94F70] hover:bg-[#FFF0F3] font-medium px-6 py-3 rounded-xl transition">Canjear Cupón</a>
+                <a href="#pedido" class="bg-[#D94F70] hover:bg-[#c23f5e] text-white font-medium px-6 py-3 rounded-xl shadow-lg transition">Pedir Sin Filas</a>
+                <a href="#menu" class="bg-white border border-[#D94F70] text-[#D94F70] hover:bg-[#FFF0F3] font-medium px-6 py-3 rounded-xl transition">Ver Menú</a>
             </div>
         </div>
     </header>
 
-    <!-- Sección Proyecto Escolar / Las 4P -->
+    <!-- Proyecto Escolar / Las 4P -->
     <section id="proyecto" class="py-16 px-6 max-w-6xl mx-auto">
         <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-[#5A2E0B]">Estrategia de Negocio (Las 4P)</h2>
-            <p class="text-gray-500 text-sm mt-2">Fundamentos de mercadotecnia del proyecto</p>
+            <p class="text-gray-500 text-sm mt-2">Fundamentos de mercadotecnia</p>
         </div>
-
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Producto -->
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-orange-100 space-y-3">
                 <div class="w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center text-xl">🧁</div>
                 <h3 class="font-bold text-lg text-[#5A2E0B]">1. Producto</h3>
-                <p class="text-sm text-gray-600">
-                    Repostería fina y postres artesanales: pasteles, cheesecakes, flanes, frappés, malteadas, crepas, waffles y fresas con crema. Elaborados frescos diariamente.
-                </p>
+                <p class="text-sm text-gray-600">Repostería fina y postres artesanales frescos: pasteles, cheesecakes, flanes, frappés, malteadas, crepas, waffles y fresas con crema.</p>
             </div>
-            <!-- Precio -->
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-orange-100 space-y-3">
                 <div class="w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center text-xl">💲</div>
                 <h3 class="font-bold text-lg text-[#5A2E0B]">2. Precio</h3>
-                <p class="text-sm text-gray-600">
-                    Precios competitivos y accesibles para estudiantes (rangos desde $35 hasta $70 MXN), optimizados para generar margen de ganancia atractivo.
-                </p>
+                <p class="text-sm text-gray-600">Precios accesibles para estudiantes (desde $45 hasta $70 MXN), garantizando un excelente margen de ganancia.</p>
             </div>
-            <!-- Plaza -->
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-orange-100 space-y-3">
                 <div class="w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center text-xl">📍</div>
                 <h3 class="font-bold text-lg text-[#5A2E0B]">3. Plaza</h3>
-                <p class="text-sm text-gray-600">
-                    Venta directa en la explanada escolar durante recesos, entregas programadas en instalaciones y pedidos anticipados mediante WhatsApp e Instagram.
-                </p>
+                <p class="text-sm text-gray-600">Venta directa en stand escolar durante recesos y pedidos anticipados mediante nuestra web para evitar filas.</p>
             </div>
-            <!-- Promoción -->
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-orange-100 space-y-3">
                 <div class="w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center text-xl">📢</div>
                 <h3 class="font-bold text-lg text-[#5A2E0B]">4. Promoción</h3>
-                <p class="text-sm text-gray-600">
-                    Degustaciones gratis el día del lanzamiento, dinámicas en redes sociales, cupones digitales únicos por WhatsApp y combos especiales de fin de semana.
-                </p>
+                <p class="text-sm text-gray-600">Degustaciones de lanzamiento, cupones digitales únicos por número celular y dinámicas constantes en redes sociales.</p>
             </div>
         </div>
     </section>
 
-    <!-- Menú de Producción -->
+    <!-- Menú con Precios y Descripciones -->
     <section id="menu" class="bg-white py-16 px-6">
-        <div class="max-w-5xl mx-auto">
+        <div class="max-w-6xl mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-[#5A2E0B]">Nuestro Menú de Producción</h2>
-                <p class="text-gray-500 text-sm mt-2">Los postres favoritos de la comunidad</p>
+                <h2 class="text-3xl font-bold text-[#5A2E0B]">Menú y Precios Unitarios</h2>
+                <p class="text-gray-500 text-sm mt-2">Deliciosas opciones preparadas al momento</p>
             </div>
 
             <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <div class="bg-[#FFF9F5] p-5 rounded-xl border border-orange-100 text-center">
-                    <div class="text-3xl mb-2">🍰</div>
-                    <h4 class="font-bold text-[#5A2E0B]">Pasteles</h4>
-                    <p class="text-xs text-gray-500 mt-1">Rebanadas del día</p>
+                <!-- Pastel -->
+                <div class="bg-[#FFF9F5] p-5 rounded-2xl border border-orange-100 flex flex-col justify-between">
+                    <div>
+                        <div class="text-3xl mb-2">🍰</div>
+                        <h4 class="font-bold text-[#5A2E0B] text-lg">Pasteles</h4>
+                        <p class="text-xs text-gray-600 mt-1">Rebanada de pastel húmedo del día con cobertura cremosa.</p>
+                    </div>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-lg font-bold text-[#D94F70]">$55.00 MXN</span>
+                        <span class="text-xs bg-pink-100 text-[#7C3F00] px-2 py-1 rounded-md">Unidad</span>
+                    </div>
                 </div>
-                <div class="bg-[#FFF9F5] p-5 rounded-xl border border-orange-100 text-center">
-                    <div class="text-3xl mb-2">🧀</div>
-                    <h4 class="font-bold text-[#5A2E0B]">Cheesecake</h4>
-                    <p class="text-xs text-gray-500 mt-1">Cremoso y artesanal</p>
+                <!-- Cheesecake -->
+                <div class="bg-[#FFF9F5] p-5 rounded-2xl border border-orange-100 flex flex-col justify-between">
+                    <div>
+                        <div class="text-3xl mb-2">🧀</div>
+                        <h4 class="font-bold text-[#5A2E0B] text-lg">Cheesecake</h4>
+                        <p class="text-xs text-gray-600 mt-1">Suave y cremoso con base de galleta y mermelada de frutos rojos.</p>
+                    </div>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-lg font-bold text-[#D94F70]">$60.00 MXN</span>
+                        <span class="text-xs bg-pink-100 text-[#7C3F00] px-2 py-1 rounded-md">Unidad</span>
+                    </div>
                 </div>
-                <div class="bg-[#FFF9F5] p-5 rounded-xl border border-orange-100 text-center">
-                    <div class="text-3xl mb-2">🍮</div>
-                    <h4 class="font-bold text-[#5A2E0B]">Flanes</h4>
-                    <p class="text-xs text-gray-500 mt-1">Tradicionales de la casa</p>
+                <!-- Flan -->
+                <div class="bg-[#FFF9F5] p-5 rounded-2xl border border-orange-100 flex flex-col justify-between">
+                    <div>
+                        <div class="text-3xl mb-2">🍮</div>
+                        <h4 class="font-bold text-[#5A2E0B] text-lg">Flanes</h4>
+                        <p class="text-xs text-gray-600 mt-1">Flan napolitano casero bañado en caramelo dorado.</p>
+                    </div>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-lg font-bold text-[#D94F70]">$45.00 MXN</span>
+                        <span class="text-xs bg-pink-100 text-[#7C3F00] px-2 py-1 rounded-md">Unidad</span>
+                    </div>
                 </div>
-                <div class="bg-[#FFF9F5] p-5 rounded-xl border border-orange-100 text-center">
-                    <div class="text-3xl mb-2">🧋</div>
-                    <h4 class="font-bold text-[#5A2E0B]">Frappés</h4>
-                    <p class="text-xs text-gray-500 mt-1">Fríos y refrescantes</p>
+                <!-- Frappé -->
+                <div class="bg-[#FFF9F5] p-5 rounded-2xl border border-orange-100 flex flex-col justify-between">
+                    <div>
+                        <div class="text-3xl mb-2">🧋</div>
+                        <h4 class="font-bold text-[#5A2E0B] text-lg">Frappés</h4>
+                        <p class="text-xs text-gray-600 mt-1">Bebida helada de café o chocolate con crema batida.</p>
+                    </div>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-lg font-bold text-[#D94F70]">$50.00 MXN</span>
+                        <span class="text-xs bg-pink-100 text-[#7C3F00] px-2 py-1 rounded-md">Unidad</span>
+                    </div>
                 </div>
-                <div class="bg-[#FFF9F5] p-5 rounded-xl border border-orange-100 text-center">
-                    <div class="text-3xl mb-2">🥤</div>
-                    <h4 class="font-bold text-[#5A2E0B]">Malteadas</h4>
-                    <p class="text-xs text-gray-500 mt-1">Variedad de sabores</p>
+                <!-- Malteada -->
+                <div class="bg-[#FFF9F5] p-5 rounded-2xl border border-orange-100 flex flex-col justify-between">
+                    <div>
+                        <div class="text-3xl mb-2">🥤</div>
+                        <h4 class="font-bold text-[#5A2E0B] text-lg">Malteadas</h4>
+                        <p class="text-xs text-gray-600 mt-1">Malteada espesa de fresa, chocolate o vainilla artesanal.</p>
+                    </div>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-lg font-bold text-[#D94F70]">$55.00 MXN</span>
+                        <span class="text-xs bg-pink-100 text-[#7C3F00] px-2 py-1 rounded-md">Unidad</span>
+                    </div>
                 </div>
-                <div class="bg-[#FFF9F5] p-5 rounded-xl border border-orange-100 text-center">
-                    <div class="text-3xl mb-2">🥞</div>
-                    <h4 class="font-bold text-[#5A2E0B]">Crepas</h4>
-                    <p class="text-xs text-gray-500 mt-1">Dulces y preparadas al momento</p>
+                <!-- Crepa -->
+                <div class="bg-[#FFF9F5] p-5 rounded-2xl border border-orange-100 flex flex-col justify-between">
+                    <div>
+                        <div class="text-3xl mb-2">🥞</div>
+                        <h4 class="font-bold text-[#5A2E0B] text-lg">Crepas</h4>
+                        <p class="text-xs text-gray-600 mt-1">Crepa dulce recién hecha con Nutella y plátano o fresa.</p>
+                    </div>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-lg font-bold text-[#D94F70]">$65.00 MXN</span>
+                        <span class="text-xs bg-pink-100 text-[#7C3F00] px-2 py-1 rounded-md">Unidad</span>
+                    </div>
                 </div>
-                <div class="bg-[#FFF9F5] p-5 rounded-xl border border-orange-100 text-center">
-                    <div class="text-3xl mb-2">🧇</div>
-                    <h4 class="font-bold text-[#5A2E0B]">Waffles</h4>
-                    <p class="text-xs text-gray-500 mt-1">Crujientes y deliciosos</p>
+                <!-- Waffle -->
+                <div class="bg-[#FFF9F5] p-5 rounded-2xl border border-orange-100 flex flex-col justify-between">
+                    <div>
+                        <div class="text-3xl mb-2">🧇</div>
+                        <h4 class="font-bold text-[#5A2E0B] text-lg">Waffles</h4>
+                        <p class="text-xs text-gray-600 mt-1">Waffle crujiente acompañado de topping a elección.</p>
+                    </div>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-lg font-bold text-[#D94F70]">$60.00 MXN</span>
+                        <span class="text-xs bg-pink-100 text-[#7C3F00] px-2 py-1 rounded-md">Unidad</span>
+                    </div>
                 </div>
-                <div class="bg-[#FFF9F5] p-5 rounded-xl border border-orange-100 text-center">
-                    <div class="text-3xl mb-2">🍓</div>
-                    <h4 class="font-bold text-[#5A2E0B]">Fresas con crema</h4>
-                    <p class="text-xs text-gray-500 mt-1">Frescas y con receta secreta</p>
+                <!-- Fresas con crema -->
+                <div class="bg-[#FFF9F5] p-5 rounded-2xl border border-orange-100 flex flex-col justify-between">
+                    <div>
+                        <div class="text-3xl mb-2">🍓</div>
+                        <h4 class="font-bold text-[#5A2E0B] text-lg">Fresas con crema</h4>
+                        <p class="text-xs text-gray-600 mt-1">Fresas frescas seleccionadas con nuestra crema especial.</p>
+                    </div>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-lg font-bold text-[#D94F70]">$50.00 MXN</span>
+                        <span class="text-xs bg-pink-100 text-[#7C3F00] px-2 py-1 rounded-md">Unidad</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pedido en Línea (Evita filas + Tiempos + Sugerencias + Pagos Falsos) -->
+    <section id="pedido" class="py-16 px-6 max-w-4xl mx-auto">
+        <div class="bg-white p-8 md:p-10 rounded-3xl shadow-md border border-orange-100 space-y-6">
+            <div class="text-center">
+                <span class="text-xs bg-pink-100 text-[#D94F70] font-semibold px-3 py-1 rounded-full">¡Ahorra Fila!</span>
+                <h2 class="text-3xl font-bold text-[#5A2E0B] mt-2">Realiza tu Pedido en Línea</h2>
+                <p class="text-gray-500 text-sm mt-1">Cada producto toma un estimado de <strong>3 minutos</strong> de preparación.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 pt-4">
+                <div class="space-y-4">
+                    <label class="block text-sm font-semibold text-gray-700">Selecciona tu Producto:</label>
+                    <select id="select-producto" onchange="actualizarSugerencia()" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-[#D94F70]">
+                        <option value="pastel" data-precio="55">Pastel - $55 MXN</option>
+                        <option value="cheesecake" data-precio="60">Cheesecake - $60 MXN</option>
+                        <option value="flan" data-precio="45">Flanes - $45 MXN</option>
+                        <option value="frappe" data-precio="50">Frappés - $50 MXN</option>
+                        <option value="malteada" data-precio="55">Malteadas - $55 MXN</option>
+                        <option value="crepa" data-precio="65">Crepas - $65 MXN</option>
+                        <option value="waffle" data-precio="60">Waffles - $60 MXN</option>
+                        <option value="fresas" data-precio="50">Fresas con crema - $50 MXN</option>
+                    </select>
+
+                    <label class="block text-sm font-semibold text-gray-700">Cantidad:</label>
+                    <input type="number" id="input-cantidad" min="1" max="10" value="1" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-[#D94F70]">
+
+                    <label class="block text-sm font-semibold text-gray-700">Método de Pago Ficticio:</label>
+                    <select id="select-pago" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-[#D94F70]">
+                        <option value="Apple Pay">Apple Pay (Simulado)</option>
+                        <option value="Google Pay">Google Pay (Simulado)</option>
+                        <option value="Efectivo">Pago en efectivo al recoger</option>
+                    </select>
+
+                    <button onclick="calcularPedido()" class="w-full bg-[#D94F70] hover:bg-[#c23f5e] text-white font-medium py-3 rounded-xl transition shadow-md">
+                        Generar Pedido y Calcular Espera
+                    </button>
+                </div>
+
+                <!-- Panel de Sugerencias y Resultado -->
+                <div class="bg-[#FFF9F5] p-6 rounded-2xl border border-orange-200 flex flex-col justify-between space-y-4">
+                    <div>
+                        <h3 class="font-bold text-[#5A2E0B] text-lg border-b pb-2 border-orange-200">💡 Sugerencia del Chef</h3>
+                        <p id="texto-sugerencia" class="text-sm text-gray-600 mt-3">
+                            Selecciona una malteada para ver la recomendación especial de maridaje.
+                        </p>
+                    </div>
+
+                    <div id="resumen-pedido" class="hidden space-y-2 pt-4 border-t border-orange-200 text-sm">
+                        <p class="font-bold text-[#D94F70]">¡Pedido registrado con éxito!</p>
+                        <p><strong>Total a Pagar:</strong> <span id="res-total"></span></p>
+                        <p><strong>Tiempo de espera estimado:</strong> <span id="res-tiempo" class="font-bold text-green-700"></span></p>
+                        <p><strong>Método de pago:</strong> <span id="res-pago"></span></p>
+                        <p class="text-xs text-gray-500 pt-2">Muestra tu pantalla en el stand escolar para saltarte la fila.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Conócenos (Equipo) -->
+    <section id="equipo" class="bg-white py-16 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-[#5A2E0B]">Conoce a Nuestro Equipo</h2>
+                <p class="text-gray-500 text-sm mt-2">El talento detrás de Dulce Pecado</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Brittany -->
+                <div class="bg-[#FFF9F5] p-6 rounded-2xl border border-orange-100 text-center space-y-3">
+                    <div class="w-16 h-16 bg-pink-200 text-[#7C3F00] rounded-full flex items-center justify-center mx-auto text-xl font-bold">BA</div>
+                    <h3 class="font-bold text-[#5A2E0B]">Brittany Alderete</h3>
+                    <p class="text-xs bg-[#D94F70] text-white py-1 px-2 rounded-full inline-block font-medium">Ventas y Marketing</p>
+                </div>
+                <!-- Valeria -->
+                <div class="bg-[#FFF9F5] p-6 rounded-2xl border border-orange-100 text-center space-y-3">
+                    <div class="w-16 h-16 bg-pink-200 text-[#7C3F00] rounded-full flex items-center justify-center mx-auto text-xl font-bold">VH</div>
+                    <h3 class="font-bold text-[#5A2E0B]">Valeria Hernández</h3>
+                    <p class="text-xs bg-[#D94F70] text-white py-1 px-2 rounded-full inline-block font-medium">Producción</p>
+                </div>
+                <!-- Lisset -->
+                <div class="bg-[#FFF9F5] p-6 rounded-2xl border border-orange-100 text-center space-y-3">
+                    <div class="w-16 h-16 bg-pink-200 text-[#7C3F00] rounded-full flex items-center justify-center mx-auto text-xl font-bold">L</div>
+                    <h3 class="font-bold text-[#5A2E0B]">Lisset</h3>
+                    <p class="text-xs bg-[#D94F70] text-white py-1 px-2 rounded-full inline-block font-medium">Finanzas</p>
+                </div>
+                <!-- Sebastián -->
+                <div class="bg-[#FFF9F5] p-6 rounded-2xl border border-orange-100 text-center space-y-3">
+                    <div class="w-16 h-16 bg-pink-200 text-[#7C3F00] rounded-full flex items-center justify-center mx-auto text-xl font-bold">SM</div>
+                    <h3 class="font-bold text-[#5A2E0B]">Sebastián Mendoza</h3>
+                    <p class="text-xs bg-[#D94F70] text-white py-1 px-2 rounded-full inline-block font-medium">Recursos Humanos</p>
                 </div>
             </div>
         </div>
@@ -148,23 +287,21 @@
     <section id="presupuesto" class="py-16 px-6 max-w-4xl mx-auto">
         <div class="text-center mb-10">
             <h2 class="text-3xl font-bold text-[#5A2E0B]">Presupuesto y Viabilidad Financiera</h2>
-            <p class="text-gray-500 text-sm mt-2">Proyección semanal estimada para evaluación</p>
+            <p class="text-gray-500 text-sm mt-2">Proyección semanal estimada</p>
         </div>
         <div class="bg-white p-8 rounded-2xl shadow-sm border border-orange-100 grid md:grid-cols-2 gap-8">
             <div class="space-y-4">
-                <h3 class="font-bold text-lg text-[#D94F70] border-b pb-2">Costos Operativos (Semana)</h3>
+                <h3 class="font-bold text-lg text-[#D94F70] border-b pb-2">Costos Operativos (Semanal)</h3>
                 <ul class="space-y-2 text-sm text-gray-600">
                     <li class="flex justify-between"><span>Materia Prima (Insumos):</span> <span class="font-semibold">$600 MXN</span></li>
-                    <p class="text-xs text-gray-400">Fruta, lácteos, bases de repostería y empaques</p>
                     <li class="flex justify-between pt-2"><span>Gastos de Comercialización:</span> <span class="font-semibold">$150 MXN</span></li>
-                    <p class="text-xs text-gray-400">Etiquetas impresas y material publicitario</p>
                 </ul>
             </div>
             <div class="space-y-4 bg-[#FFF9F5] p-6 rounded-xl flex flex-col justify-between">
                 <div>
-                    <h3 class="font-bold text-lg text-[#5A2E0B] border-b pb-2 border-orange-200">Proyección de Utilidades</h3>
+                    <h3 class="font-bold text-lg text-[#5A2E0B] border-b pb-2 border-orange-200">Utilidades Esperadas</h3>
                     <div class="mt-4 space-y-2 text-sm">
-                        <div class="flex justify-between"><span>Ventas Esperadas:</span> <span class="font-semibold text-green-700">$1,800 MXN</span></div>
+                        <div class="flex justify-between"><span>Ventas Estimadas:</span> <span class="font-semibold text-green-700">$1,800 MXN</span></div>
                         <div class="flex justify-between"><span>Costos Totales:</span> <span class="font-semibold text-red-600">$750 MXN</span></div>
                     </div>
                 </div>
@@ -176,13 +313,13 @@
         </div>
     </section>
 
-    <!-- Sección de Cupones Únicos por Teléfono (Bloqueo de duplicados) -->
+    <!-- Sección de Cupones con Teléfono (Bloqueo de duplicados) -->
     <section id="cupon" class="bg-[#FFD1DC]/20 py-16 px-6">
         <div class="max-w-md mx-auto bg-white p-8 rounded-2xl shadow-md border border-pink-100 text-center space-y-6">
             <div class="w-12 h-12 bg-[#FFD1DC] text-[#7C3F00] rounded-full flex items-center justify-center mx-auto text-2xl font-bold">🎟️</div>
             <div>
-                <h2 class="text-2xl font-bold text-[#5A2E0B]">Obtén tu Código Promocional</h2>
-                <p class="text-xs text-gray-500 mt-1">Ingresa tu número celular para generar un cupón de descuento irrepetible (Válido 1 por cliente).</p>
+                <h2 class="text-2xl font-bold text-[#5A2E0B]">Obtén tu Cupón de Descuento</h2>
+                <p class="text-xs text-gray-500 mt-1">Ingresa tu número celular para generar un código único irrepetible (1 por cliente).</p>
             </div>
 
             <div id="form-container" class="space-y-4">
@@ -192,26 +329,72 @@
                 </button>
             </div>
 
-            <!-- Resultado del Cupón -->
             <div id="resultado-cupon" class="hidden space-y-3 bg-[#FFF9F5] p-4 rounded-xl border border-orange-200">
                 <p class="text-xs text-gray-500">Tu código promocional exclusivo es:</p>
                 <div id="codigo-texto" class="text-2xl font-mono font-bold text-[#D94F70] tracking-wider bg-white py-2 rounded-lg border border-dashed border-pink-300"></div>
-                <p class="text-xs text-gray-600">Muéstralo en nuestro stand escolar o en WhatsApp para hacer válido tu descuento.</p>
+                <p class="text-xs text-gray-600">Muéstralo en nuestro stand escolar.</p>
             </div>
 
-            <!-- Mensaje de error si ya fue registrado -->
             <div id="error-cupon" class="hidden text-red-500 text-sm font-medium bg-red-50 p-3 rounded-xl"></div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#5A2E0B] text-white py-8 px-6 text-center text-sm space-y-2">
+    <footer class="box-border bg-[#5A2E0B] text-white py-8 px-6 text-center text-sm space-y-2">
         <p class="font-medium">Dulce Pecado • Postres que enamoran</p>
-        <p class="text-xs text-orange-200">Proyecto Escolar con Fines Académicos 2026</p>
+        <p class="text-xs text-orange-200">Proyecto Escolar 2026</p>
     </footer>
 
-    <!-- Script de validación de cupones únicos por número de teléfono -->
+    <!-- Scripts de Interacción -->
     <script>
+        // Sugerencias Inteligentes dinámicas
+        function actualizarSugerencia() {
+            const producto = document.getElementById('select-producto').value;
+            const sugerenciaBox = document.getElementById('texto-sugerencia');
+
+            let sugerenciaTexto = "";
+            switch(producto) {
+                case 'malteada':
+                    sugerenciaTexto = "🥤 ¿Pediste una malteada? Te sugerimos acompañarla con una <strong>Crepa de Nutella</strong> para tener el balance dulce perfecto.";
+                    break;
+                case 'frappe':
+                    sugerenciaTexto = "🧋 Un frappé refrescante combina excelente con una rebanada de nuestro <strong>Cheesecake cremoso</strong>.";
+                    break;
+                case 'pastel':
+                    sugerenciaTexto = "🍰 Para un pastel, te recomendamos acompañarlo con una <strong>Malteada fría</strong> de vainilla.";
+                    break;
+                case 'crepa':
+                    sugerenciaTexto = "🥞 Tu crepa quedará increíble si le sumas un <strong>Frappé de café</strong>.";
+                    break;
+                case 'waffle':
+                    sugerenciaTexto = "🧇 Los waffles son ideales para acompañarse con una porción fresca de <strong>Fresas con crema</strong>.";
+                    break;
+                default:
+                    sugerenciaTexto = "✨ Potencia tu experiencia combinando este postre con una de nuestras bebidas frías del día.";
+            }
+            sugerenciaBox.innerHTML = sugerenciaTexto;
+        }
+
+        // Calcular Pedido y Tiempos de Espera (3 min por producto)
+        function calcularPedido() {
+            const select = document.getElementById('select-producto');
+            const cantidad = parseInt(document.getElementById('input-cantidad').value) || 1;
+            const metodoPago = document.getElementById('select-pago').value;
+            
+            const precioUnitario = parseFloat(select.options[select.selectedIndex].getAttribute('data-precio'));
+            const total = precioUnitario * cantidad;
+            
+            // 3 minutos por cada unidad pedida
+            const tiempoEspera = cantidad * 3;
+
+            document.getElementById('res-total').innerText = `$${total.toFixed(2)} MXN`;
+            document.getElementById('res-tiempo').innerText = `${tiempoEspera} minutos`;
+            document.getElementById('res-pago').innerText = metodoPago;
+
+            document.getElementById('resumen-pedido').classList.remove('hidden');
+        }
+
+        // Generar Cupón Único con bloqueo de teléfono repetido
         function generarCupon() {
             const telefonoInput = document.getElementById('telefono').value.trim();
             const formContainer = document.getElementById('form-container');
@@ -219,40 +402,36 @@
             const codigoTexto = document.getElementById('codigo-texto');
             const errorDiv = document.getElementById('error-cupon');
 
-            // Limpiar errores previos
             errorDiv.classList.add('hidden');
             errorDiv.innerText = '';
 
-            // Validación básica de número
             if (telefonoInput.length < 10) {
-                errorDiv.innerText = "Por favor ingresa un número de celular válido de 10 dígitos.";
+                errorDiv.innerText = "Por favor ingresa un número celular válido de 10 dígitos.";
                 errorDiv.classList.remove('hidden');
                 return;
             }
 
-            // Revisar localStorage para ver si este teléfono ya reclamó cupón
             let cuponesRegistrados = JSON.parse(localStorage.getItem('dulcepecado_cupones')) || {};
 
             if (cuponesRegistrados[telefonoInput]) {
-                // Ya existe, bloquear
-                errorDiv.innerText = "⚠️ Este número ya cuenta con un código promocional registrado y canjeado.";
+                errorDiv.innerText = "⚠️ Este número ya cuenta con un código promocional registrado.";
                 errorDiv.classList.remove('hidden');
                 return;
             }
 
-            // Generar un código único (Ej: DP-8492)
             const randomNum = Math.floor(1000 + Math.random() * 9000);
             const codigoUnico = `DP-${randomNum}`;
 
-            // Guardar en localStorage para bloquear futuros registros con este mismo número
             cuponesRegistrados[telefonoInput] = codigoUnico;
             localStorage.setItem('dulcepecado_cupones', JSON.stringify(cuponesRegistrados));
 
-            // Mostrar el cupón en pantalla y ocultar formulario
             codigoTexto.innerText = codigoUnico;
             formContainer.classList.add('hidden');
             resultadoDiv.classList.remove('hidden');
         }
+
+        // Ejecutar sugerencia inicial al cargar
+        window.onload = actualizarSugerencia;
     </script>
 </body>
 </html>
