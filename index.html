@@ -34,7 +34,7 @@
             <h1 class="text-4xl md:text-6xl font-extrabold text-[#5A2E0B]">Dulce Pecado</h1>
             <p class="text-xl text-[#7C3F00] font-medium italic">"Postres que enamoran"</p>
             <p class="text-gray-600 max-w-lg mx-auto text-sm md:text-base">
-                Disfruta de la mejor repostería artesanal con ingredientes frescos. Pide porciones individuales o pasteles enteros en línea y evita filas.
+                Disfruta de la mejor repostería artesanal con ingredientes frescos. Arma tu combo de postres y pasteles enteros en línea y evita filas.
             </p>
             <div class="flex justify-center gap-4 pt-4">
                 <a href="#pedido" class="bg-[#D94F70] hover:bg-[#c23f5e] text-white font-medium px-6 py-3 rounded-xl shadow-lg transition">Pedir en Línea</a>
@@ -175,59 +175,77 @@
         </div>
     </section>
 
-    <!-- Pedir en Línea -->
+    <!-- Pedir en Línea (Carrito Múltiple) -->
     <section id="pedido" class="py-16 px-6 max-w-4xl mx-auto">
         <div class="bg-white p-8 md:p-10 rounded-3xl shadow-md border border-orange-100 space-y-6">
             <div class="text-center">
                 <span class="text-xs bg-pink-100 text-[#D94F70] font-semibold px-3 py-1 rounded-full">Evita Filas</span>
-                <h2 class="text-3xl font-bold text-[#5A2E0B] mt-2">Realiza tu Pedido en Línea</h2>
-                <p class="text-gray-500 text-sm mt-1">Selecciona porciones o enteros, paga con método simulado y obtén tu código de recogida.</p>
+                <h2 class="text-3xl font-bold text-[#5A2E0B] mt-2">Arma tu Pedido en Línea</h2>
+                <p class="text-gray-500 text-sm mt-1">Agrega cuantos postres gustes al carrito, paga y obtén tu código de recogida.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-6 pt-4">
+            <div class="grid md:grid-cols-2 gap-8 pt-4">
                 <div class="space-y-4">
-                    <label class="block text-sm font-semibold text-gray-700">Producto:</label>
+                    <label class="block text-sm font-semibold text-gray-700">Selecciona un producto:</label>
                     <select id="select-producto" onchange="actualizarSugerencia()" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-[#D94F70]">
-                        <option value="pastel-rebanada" data-precio="55">Pastel 3 Leches (Rebanada 150g) - $55 MXN</option>
-                        <option value="pastel-entero" data-precio="550">Pastel 3 Leches (Entero 1.5kg / 12 pzas) - $550 MXN</option>
-                        <option value="cheesecake-rebanada" data-precio="60">Cheesecake (Rebanada 130g) - $60 MXN</option>
-                        <option value="cheesecake-entero" data-precio="420">Cheesecake (Entero 8 rebanadas) - $420 MXN</option>
-                        <option value="flan" data-precio="45">Flanes Napolitanos - $45 MXN</option>
-                        <option value="frappe" data-precio="50">Frappés - $50 MXN</option>
-                        <option value="malteada" data-precio="55">Malteadas - $55 MXN</option>
-                        <option value="crepa" data-precio="65">Crepas Dulces - $65 MXN</option>
-                        <option value="waffle" data-precio="60">Waffles - $60 MXN</option>
-                        <option value="fresas" data-precio="50">Fresas con crema - $50 MXN</option>
+                        <option value="Pastel 3 Leches (Rebanada 150g)" data-precio="55">Pastel 3 Leches (Rebanada 150g) - $55 MXN</option>
+                        <option value="Pastel 3 Leches (Entero 1.5kg)" data-precio="550">Pastel 3 Leches (Entero 1.5kg / 12 pzas) - $550 MXN</option>
+                        <option value="Cheesecake (Rebanada 130g)" data-precio="60">Cheesecake (Rebanada 130g) - $60 MXN</option>
+                        <option value="Cheesecake (Entero 8 rebanadas)" data-precio="420">Cheesecake (Entero 8 rebanadas) - $420 MXN</option>
+                        <option value="Flan Napolitano" data-precio="45">Flanes Napolitanos - $45 MXN</option>
+                        <option value="Frappé" data-precio="50">Frappés - $50 MXN</option>
+                        <option value="Malteada" data-precio="55">Malteadas - $55 MXN</option>
+                        <option value="Crepa Dulce" data-precio="65">Crepas Dulces - $65 MXN</option>
+                        <option value="Waffle Crujiente" data-precio="60">Waffles - $60 MXN</option>
+                        <option value="Fresas con Crema" data-precio="50">Fresas con crema - $50 MXN</option>
                     </select>
 
                     <label class="block text-sm font-semibold text-gray-700">Cantidad:</label>
                     <input type="number" id="input-cantidad" min="1" max="10" value="1" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-[#D94F70]">
 
-                    <label class="block text-sm font-semibold text-gray-700">Método de Pago:</label>
-                    <select id="select-pago" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-[#D94F70]">
-                        <option value="Apple Pay">Apple Pay</option>
-                        <option value="Google Pay">Google Pay</option>
-                        <option value="Efectivo">Pago en efectivo al recoger</option>
-                    </select>
+                    <button onclick="agregarAlCarrito()" class="w-full bg-[#5A2E0B] hover:bg-black text-white font-medium py-3 rounded-xl transition shadow-md">
+                        ➕ Agregar al Carrito
+                    </button>
 
-                    <button onclick="realizarPedido()" class="w-full bg-[#D94F70] hover:bg-[#c23f5e] text-white font-medium py-3 rounded-xl transition shadow-md">
-                        Pagar y Generar Código de Recogida
+                    <div class="pt-4 border-t border-gray-100">
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Método de Pago:</label>
+                        <select id="select-pago" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-[#D94F70]">
+                            <option value="Apple Pay">Apple Pay</option>
+                            <option value="Google Pay">Google Pay</option>
+                            <option value="Efectivo">Pago en efectivo al recoger</option>
+                        </select>
+                    </div>
+
+                    <button onclick="procesarPago()" class="w-full bg-[#D94F70] hover:bg-[#c23f5e] text-white font-medium py-3 rounded-xl transition shadow-md">
+                        Pagar Carrito y Generar Código
                     </button>
                 </div>
 
-                <!-- Sugerencias y Ticket -->
                 <div class="bg-[#FFF9F5] p-6 rounded-2xl border border-orange-200 flex flex-col justify-between space-y-4">
                     <div>
-                        <h3 class="font-bold text-[#5A2E0B] text-lg border-b pb-2 border-orange-200">💡 Sugerencia del Chef</h3>
-                        <p id="texto-sugerencia" class="text-sm text-gray-600 mt-3">Selecciona un producto para ver recomendaciones.</p>
+                        <h3 class="font-bold text-[#5A2E0B] text-lg border-b pb-2 border-orange-200">🛒 Tu Carrito de Compras</h3>
+                        <div id="lista-carrito" class="mt-3 space-y-2 text-sm text-gray-600 max-h-48 overflow-y-auto">
+                            <p class="text-xs text-gray-400 italic">Tu carrito está vacío. Agrega productos.</p>
+                        </div>
                     </div>
 
-                    <div id="resumen-pedido" class="hidden space-y-2 pt-4 border-t border-orange-200 text-sm bg-white p-4 rounded-xl border border-pink-200">
+                    <div class="pt-3 border-t border-orange-200">
+                        <div class="flex justify-between font-bold text-base text-[#5A2E0B]">
+                            <span>Total Acumulado:</span>
+                            <span id="carrito-total">$0.00 MXN</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-xs text-[#5A2E0B] uppercase tracking-wide">💡 Sugerencia del Chef</h4>
+                        <p id="texto-sugerencia" class="text-xs text-gray-600 mt-1">Selecciona un producto para ver recomendaciones.</p>
+                    </div>
+
+                    <div id="resumen-pedido" class="hidden space-y-2 pt-3 border-t border-orange-200 text-sm bg-white p-4 rounded-xl border border-pink-200">
                         <p class="font-bold text-[#D94F70] text-center">¡Pago Exitoso!</p>
                         <p class="text-center text-xs text-gray-500">Muestra este código en ventanilla:</p>
                         <div id="ticket-codigo" class="text-2xl font-mono font-bold text-center text-[#5A2E0B] bg-pink-50 py-2 rounded-lg border border-dashed border-pink-300"></div>
-                        <p><strong>Total pagado:</strong> <span id="res-total"></span></p>
-                        <p><strong>Método:</strong> <span id="res-pago"></span></p>
+                        <p class="text-xs"><strong>Método:</strong> <span id="res-pago"></span></p>
                     </div>
                 </div>
             </div>
@@ -242,14 +260,33 @@
                 Somos un equipo apasionado por la repostería fina, entregando calidad y sabor inigualable en cada preparación.
             </p>
 
+            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 pt-6">
+                <div class="bg-[#FFF9F5] p-4 rounded-xl border border-orange-100">
+                    <h4 class="font-bold text-[#5A2E0B] text-sm">Brittany Alderete</h4>
+                    <p class="text-xs text-[#D94F70] mt-1 font-medium">Ventas y Marketing</p>
+                </div>
+                <div class="bg-[#FFF9F5] p-4 rounded-xl border border-orange-100">
+                    <h4 class="font-bold text-[#5A2E0B] text-sm">Valeria Hernández</h4>
+                    <p class="text-xs text-[#D94F70] mt-1 font-medium">Producción</p>
+                </div>
+                <div class="bg-[#FFF9F5] p-4 rounded-xl border border-orange-100">
+                    <h4 class="font-bold text-[#5A2E0B] text-sm">Lisset</h4>
+                    <p class="text-xs text-[#D94F70] mt-1 font-medium">Finanzas</p>
+                </div>
+                <div class="bg-[#FFF9F5] p-4 rounded-xl border border-orange-100">
+                    <h4 class="font-bold text-[#5A2E0B] text-sm">Sebastián Mendoza</h4>
+                    <p class="text-xs text-[#D94F70] mt-1 font-medium">Recursos Humanos</p>
+                </div>
+            </div>
+
             <!-- Acceso Secreto para el Profesor -->
             <div class="pt-8 border-t border-gray-100">
-                <button onclick="toggleAccesoSecreto()" class="text-xs text-gray-400 hover:text-[#D94F70] underline transition">
+                <button onclick="toggleAccesoSecreto()" class="text-xs text-gray-400 hover:text-[#D94F70] underline transition font-semibold">
                     🔐 Acceso administrativo docente
                 </button>
 
                 <!-- Formulario Login Secreto -->
-                <div id="login-secreto" class="hidden max-w-sm mx-auto mt-6 bg-[#FFF9F5] p-6 rounded-2xl border border-orange-200 space-y-4 text-left">
+                <div id="login-secreto" class="hidden max-w-sm mx-auto mt-6 bg-[#FFF9F5] p-6 rounded-2xl border border-orange-200 space-y-4 text-left shadow-sm">
                     <h3 class="font-bold text-sm text-[#5A2E0B]">Acceso Restringido</h3>
                     <div>
                         <label class="block text-xs font-semibold text-gray-600 mb-1">Usuario:</label>
@@ -265,50 +302,99 @@
                     <p id="error-login" class="text-xs text-red-500 hidden"></p>
                 </div>
 
-                <!-- Contenido Secreto (Rúbrica de la escuela) -->
-                <div id="contenido-secreto" class="hidden mt-8 text-left bg-gray-50 p-8 rounded-2xl border border-gray-200 space-y-6">
-                    <div class="bg-[#D94F70] text-white px-4 py-2 rounded-lg font-bold text-sm text-center">
-                        PANEL DE EVALUACIÓN DOCENTE (PROYECTO ESCOLAR)
+                <!-- Contenido Secreto (Estructurado Ejecutivamente para 10) -->
+                <div id="contenido-secreto" class="hidden mt-8 text-left bg-white p-8 md:p-10 rounded-3xl border-2 border-[#D94F70]/30 shadow-lg space-y-8">
+                    <div class="bg-[#D94F70] text-white px-6 py-3 rounded-xl font-bold text-base text-center tracking-wide">
+                        📋 EXPEDIENTE EJECUTIVO DE PROYECTO EMPRESARIAL — DULCE PECADO
                     </div>
 
-                    <div class="space-y-4 text-sm text-gray-700">
-                        <div>
-                            <h4 class="font-bold text-[#5A2E0B] text-base">1. Nombre, logo y eslogan</h4>
-                            <p class="text-xs text-gray-500">Logo minimalista • Eslogan: "Toma fresco, toma Chill"</p>
+                    <!-- 1. Identidad -->
+                    <div class="space-y-2 border-b border-pink-100 pb-6">
+                        <h4 class="font-bold text-lg text-[#5A2E0B] flex items-center gap-2"><span>🏷️</span> 1. Identidad Corporativa</h4>
+                        <div class="grid sm:grid-cols-3 gap-4 text-xs text-gray-600 bg-[#FFF9F5] p-4 rounded-xl">
+                            <div><strong>Nombre Comercial:</strong> Dulce Pecado</div>
+                            <div><strong>Diseño de Logotipo:</strong> Minimalista, enfocado en repostería artesanal con paleta rosa pastel y chocolate.</div>
+                            <div><strong>Eslogan Oficial:</strong> "Postres que enamoran"</div>
                         </div>
-                        <div>
-                            <h4 class="font-bold text-[#5A2E0B] text-base">2. Las 4P</h4>
-                            <ul class="list-disc pl-5 text-xs space-y-1 mt-1">
-                                <li><strong>Producto:</strong> Botella de 500ml, 3 sabores: pepino-limón, fresa-hierbabuena, mango-maracuyá. Sin azúcar.</li>
-                                <li><strong>Precio:</strong> $35 por botella, $60 con botella reutilizable.</li>
-                                <li><strong>Plaza:</strong> Prepa, centro de Celaya, Instagram y pedidos por WhatsApp.</li>
-                                <li><strong>Promoción:</strong> Degustaciones gratis el primer día.</li>
-                            </ul>
+                    </div>
+
+                    <!-- 2. Las 4 Ps -->
+                    <div class="space-y-3 border-b border-pink-100 pb-6">
+                        <h4 class="font-bold text-lg text-[#5A2E0B] flex items-center gap-2"><span>📊</span> 2. Mezcla de Mercadotecnia (Las 4P)</h4>
+                        <div class="grid sm:grid-cols-2 gap-4 text-xs">
+                            <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 space-y-1">
+                                <strong class="text-[#D94F70] text-sm">Producto:</strong>
+                                <p class="text-gray-600">Repostería fina elaborada con ingredientes 100% frescos. Catálogo que incluye pastel de 3 leches (rebanadas de 150g y enteros de 1.5kg), cheesecake de moras (rebanadas de 130g y enteros de 8 porciones), flanes napolitanos, frappés, malteadas, crepas, waffles y fresas con crema.</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 space-y-1">
+                                <strong class="text-[#D94F70] text-sm">Precio:</strong>
+                                <p class="text-gray-600">Estrategia de penetración orientada a estudiantes, con precios accesibles por porción individual ($45 a $65 MXN) y alta rentabilidad en pasteles y cheesecakes enteros ($420 a $550 MXN).</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 space-y-1">
+                                <strong class="text-[#D94F70] text-sm">Plaza (Distribución):</strong>
+                                <p class="text-gray-600">Canal directo e híbrido: Stand presencial en la explanada escolar durante los recesos, entregas programadas en el centro de Celaya, preventa digital y pedidos automatizados desde esta plataforma web para evitar filas.</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 space-y-1">
+                                <strong class="text-[#D94F70] text-sm">Promoción:</strong>
+                                <p class="text-gray-600">Estrategia de lanzamiento basada en degustaciones gratuitas en el primer día de exhibición, cupones digitales únicos de descuento por validación telefónica y combos especiales de fin de semana.</p>
+                            </div>
                         </div>
-                        <div>
-                            <h4 class="font-bold text-[#5A2E0B] text-base">3. Marketing</h4>
-                            <ul class="list-disc pl-5 text-xs space-y-1 mt-1">
-                                <li><strong>Redes:</strong> TikToks de "cómo se hace" + encuestas en insta "¿qué sabor quieres mañana?".</li>
-                                <li><strong>Empaque:</strong> Etiqueta hecha en Canva, color pastel, con QR a tu insta.</li>
-                                <li><strong>Promo de lanzamiento:</strong> 2x1 el lunes, o si traes tu botella $10 de descuento (eco-friendly).</li>
-                            </ul>
+                    </div>
+
+                    <!-- 3. Marketing -->
+                    <div class="space-y-3 border-b border-pink-100 pb-6">
+                        <h4 class="font-bold text-lg text-[#5A2E0B] flex items-center gap-2"><span>📱</span> 3. Estrategia de Marketing y Posicionamiento</h4>
+                        <ul class="list-disc pl-5 text-xs space-y-2 text-gray-600">
+                            <li><strong>Marketing de Contenidos en Redes Sociales:</strong> Campaña de videos cortos en TikTok mostrando el proceso artesanal de preparación ("Behind the scenes") y encuestas interactivas semanales en historias de Instagram (ej. <em>"¿Qué sabor de cheesecake prefieres para mañana?"</em>).</li>
+                            <li><strong>Identidad del Empaque (Branding):</strong> Cajas y tarros ecológicos personalizados con etiquetas minimalistas diseñadas en Canva en tonos pasteles, incorporando un código QR impreso que redirige directamente al perfil oficial de Instagram.</li>
+                            <li><strong>Promoción de Lanzamiento Eco-Friendly:</strong> Dinámica de 2x1 en bebidas los días lunes, y un descuento directo de $10 MXN al cliente que acuda con su termo o vaso reutilizable, fomentando la responsabilidad social y ambiental.</li>
+                        </ul>
+                    </div>
+
+                    <!-- 4. Ventas -->
+                    <div class="space-y-3 border-b border-pink-100 pb-6">
+                        <h4 class="font-bold text-lg text-[#5A2E0B] flex items-center gap-2"><span>🤝</span> 4. Gestión de Ventas y Operaciones (Brittany Alderete)</h4>
+                        <div class="bg-[#FFF9F5] p-4 rounded-xl border border-orange-200 text-xs space-y-2">
+                            <div><strong>Meta Comercial Establecida:</strong> Venta directa de 50 postres o porciones consolidadas por semana.</div>
+                            <div><strong>Tácticas de Venta Activa:</strong> Preventa anticipada mediante canal de WhatsApp corporativo, comercialización directa en stand durante los recesos y participación activa en la expo-venta institucional de la preparatoria.</div>
+                            <div><strong>Técnica de Cierre de Venta (Cross-selling):</strong> Implementación de la frase gatillo en punto de venta: <em>"Si compras 3 postres o porciones el día de hoy, te llevas completamente gratis un sticker coleccionable exclusivo de nuestra marca"</em>.</div>
                         </div>
-                        <div>
-                            <h4 class="font-bold text-[#5A2E0B] text-base">4. Ventas</h4>
-                            <ul class="list-disc pl-5 text-xs space-y-1 mt-1">
-                                <li><strong>Meta:</strong> Vender 50 botellas por semana.</li>
-                                <li><strong>Estrategia:</strong> Venta directa en receso, preventa por WhatsApp, stand en día de expo de la prepa.</li>
-                                <li><strong>Cierre:</strong> "Si me compras 3 te regalo sticker".</li>
-                            </ul>
+                    </div>
+
+                    <!-- 5. Presupuesto -->
+                    <div class="space-y-3">
+                        <h4 class="font-bold text-lg text-[#5A2E0B] flex items-center gap-2"><span>💰</span> 5. Proyección Financiera y Presupuesto Semanal</h4>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-xs text-left border border-gray-200 rounded-xl overflow-hidden">
+                                <thead class="bg-gray-100 text-[#5A2E0B]">
+                                    <tr>
+                                        <th class="p-3">Concepto de Egreso (Insumos / Operación)</th>
+                                        <th class="p-3 text-right">Costo Estimado (MXN)</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr>
+                                        <td class="p-3">Materia Prima (Fruta fresca, lácteos, chocolate y bases de repostería)</td>
+                                        <td class="p-3 text-right font-medium">$600.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3">Empaques, tarros, moldes y servilletas</td>
+                                        <td class="p-3 text-right font-medium">$500.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3">Diseño e impresión de etiquetas en imprenta</td>
+                                        <td class="p-3 text-right font-medium">$200.00</td>
+                                    </tr>
+                                    <tr class="bg-pink-50 font-bold text-[#D94F70]">
+                                        <td class="p-3">Total Costos Operativos Semanales:</td>
+                                        <td class="p-3 text-right">$1,300.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <div>
-                            <h4 class="font-bold text-[#5A2E0B] text-base">5. Presupuesto fake pero creíble</h4>
-                            <ul class="list-disc pl-5 text-xs space-y-1 mt-1">
-                                <li>Fruta: $300</li>
-                                <li>Botellas: $500</li>
-                                <li>Etiquetas en imprenta: $200</li>
-                                <li><strong>Ganancia estimada:</strong> $1,750 - $1,000 = $750 por semana</li>
-                            </ul>
+                        <div class="bg-green-50 border border-green-200 p-4 rounded-xl text-xs text-green-800 space-y-1">
+                            <div><strong>Proyección de Ingresos Brutos (Meta de 50 piezas promedio):</strong> $2,000.00 MXN</div>
+                            <div><strong>Cálculo de Utilidad Neta Semanal:</strong> $2,000.00 (Ingresos) - $1,300.00 (Costos) = <strong class="text-sm text-green-700">$700.00 MXN de ganancia neta libre por semana.</strong></div>
                         </div>
                     </div>
                 </div>
@@ -347,47 +433,104 @@
         <p class="font-medium">Dulce Pecado • Postres que enamoran</p>
     </footer>
 
-    <!-- Scripts de la página -->
+    <!-- Scripts -->
     <script>
+        let carrito = [];
+
         function actualizarSugerencia() {
-            const producto = document.getElementById('select-producto').value;
+            const select = document.getElementById('select-producto');
+            const producto = select.options[select.selectedIndex].text;
             const sugerenciaBox = document.getElementById('texto-sugerencia');
 
             let sugerenciaTexto = "";
-            if (producto.includes('pastel')) {
+            if (producto.includes('Pastel')) {
                 sugerenciaTexto = "🍰 ¿Vas a llevar pastel de 3 leches? Te sugerimos acompañarlo con un <strong>Frappé frío</strong> para equilibrar el dulzor.";
-            } else if (producto.includes('cheesecake')) {
+            } else if (producto.includes('Cheesecake')) {
                 sugerenciaTexto = "🧀 Nuestro cheesecake combina perfecto con una <strong>Malteada cremosa</strong> de vainilla.";
-            } else if (producto === 'malteada') {
+            } else if (producto.includes('Malteada')) {
                 sugerenciaTexto = "🥤 ¿Pediste malteada? Te sugerimos pedir también una <strong>Crepa de Nutella</strong>.";
-            } else if (producto === 'frappe') {
+            } else if (producto.includes('Frappé')) {
                 sugerenciaTexto = "🧋 Un frappé refrescante va increíble con una rebanada de <strong>Cheesecake</strong>.";
-            } else if (producto === 'crepa') {
+            } else if (producto.includes('Crepa')) {
                 sugerenciaTexto = "🥞 Tu crepa quedará excelente acompañada de un <strong>Frappé de café</strong>.";
-            } else if (producto === 'waffle') {
+            } else if (producto.includes('Waffle')) {
                 sugerenciaTexto = "🧇 Los waffles son ideales para acompañarse con una porción de <strong>Fresas con crema</strong>.";
             } else {
-                sugerenciaTexto = "✨ Potencia tu experiencia combinando este postre con una de nuestras bebidas del día.";
+                sugerenciaTexto = "✨ Potencia tu experiencia combinando este postre con una bebida fría.";
             }
             sugerenciaBox.innerHTML = sugerenciaTexto;
         }
 
-        function realizarPedido() {
+        function agregarAlCarrito() {
             const select = document.getElementById('select-producto');
-            const cantidad = parseInt(document.getElementById('input-cantidad').value) || 1;
-            const metodoPago = document.getElementById('select-pago').value;
-            
+            const nombreProducto = select.value;
             const precioUnitario = parseFloat(select.options[select.selectedIndex].getAttribute('data-precio'));
-            const total = precioUnitario * cantidad;
+            const cantidad = parseInt(document.getElementById('input-cantidad').value) || 1;
 
+            let existente = carrito.find(item => item.nombre === nombreProducto);
+            if (existente) {
+                existente.cantidad += cantidad;
+            } else {
+                carrito.push({ nombre: nombreProducto, precio: precioUnitario, cantidad: cantidad });
+            }
+
+            renderizarCarrito();
+        }
+
+        function renderizarCarrito() {
+            const listaDiv = document.getElementById('lista-carrito');
+            const totalSpan = document.getElementById('carrito-total');
+
+            if (carrito.length === 0) {
+                listaDiv.innerHTML = '<p class="text-xs text-gray-400 italic">Tu carrito está vacío. Agrega productos.</p>';
+                totalSpan.innerText = '$0.00 MXN';
+                return;
+            }
+
+            let html = '';
+            let totalGeneral = 0;
+
+            carrito.forEach((item, index) => {
+                let subtotal = item.precio * item.cantidad;
+                totalGeneral += subtotal;
+                html += `
+                    <div class="flex justify-between items-center bg-white p-2 rounded-lg border border-orange-100 text-xs">
+                        <div>
+                            <span class="font-bold text-[#5A2E0B]">${item.cantidad}x</span> ${item.nombre}
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="font-semibold text-[#D94F70]">$${subtotal}</span>
+                            <button onclick="eliminarDelCarrito(${index})" class="text-red-400 hover:text-red-600 font-bold px-1">✕</button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            listaDiv.innerHTML = html;
+            totalSpan.innerText = `$${totalGeneral.toFixed(2)} MXN`;
+        }
+
+        function eliminarDelCarrito(index) {
+            carrito.splice(index, 1);
+            renderizarCarrito();
+        }
+
+        function procesarPago() {
+            if (carrito.length === 0) {
+                alert("Por favor agrega al menos un producto al carrito antes de pagar.");
+                return;
+            }
+
+            const metodoPago = document.getElementById('select-pago').value;
             const randomCode = Math.floor(100 + Math.random() * 900);
             const ticketCode = `DP-ORDEN-${randomCode}`;
 
             document.getElementById('ticket-codigo').innerText = ticketCode;
-            document.getElementById('res-total').innerText = `$${total.toFixed(2)} MXN`;
             document.getElementById('res-pago').innerText = metodoPago;
-
             document.getElementById('resumen-pedido').classList.remove('hidden');
+
+            carrito = [];
+            renderizarCarrito();
         }
 
         function toggleAccesoSecreto() {
@@ -416,7 +559,6 @@
             const telefonoInput = document.getElementById('telefono').value.trim();
             const formContainer = document.getElementById('form-container');
             const resultadoDiv = document.getElementById('resultado-cupon');
-            const codigoTexto = document.getElementById('codigo-texto');
             const errorDiv = document.getElementById('error-cupon');
 
             errorDiv.classList.add('hidden');
@@ -442,7 +584,7 @@
             cuponesRegistrados[telefonoInput] = codigoUnico;
             localStorage.setItem('dulcepecado_cupones', JSON.stringify(cuponesRegistrados));
 
-            codigoTexto.innerText = codigoUnico;
+            document.getElementById('codigo-texto').innerText = codigoUnico;
             formContainer.classList.add('hidden');
             resultadoDiv.classList.remove('hidden');
         }
