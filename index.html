@@ -24,6 +24,7 @@
             <a href="#menu" class="hover:text-[#D94F70]">Menú y Precios</a>
             <a href="#pedido" class="hover:text-[#D94F70]">Pedir en Línea</a>
             <a href="#conocenos" class="hover:text-[#D94F70]">Conócenos</a>
+            <a href="#contacto" class="hover:text-[#D94F70]">Contáctanos</a>
             <a href="#cupon" class="text-[#D94F70] font-bold">Cupón</a>
         </div>
     </nav>
@@ -261,7 +262,7 @@
         <div class="max-w-4xl mx-auto text-center space-y-6">
             <h2 class="text-3xl font-bold text-[#5A2E0B]">Conócenos</h2>
             <p class="text-gray-600 max-w-lg mx-auto text-sm">
-                Somos un equipo apasionado por la repostería fina, entregando calidad y sabor inigualable en cada preparación.
+                Somos un equipo apasionado por la repostería fina, entregando calidad y sabor inigualable en cada preparación en San Felipe, Gto.
             </p>
 
             <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 pt-6">
@@ -336,7 +337,7 @@
                             </div>
                             <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 space-y-1">
                                 <strong class="text-[#D94F70] text-sm">Plaza (Distribución):</strong>
-                                <p class="text-gray-600">Stand presencial en la explanada escolar durante recesos, entregas programadas en el centro de Celaya, preventa digital y pedidos automatizados web para evitar filas.</p>
+                                <p class="text-gray-600">Stand presencial en la explanada escolar durante recesos en San Felipe, Gto., preventa digital y pedidos automatizados web para evitar filas.</p>
                             </div>
                             <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 space-y-1">
                                 <strong class="text-[#D94F70] text-sm">Promoción:</strong>
@@ -360,7 +361,7 @@
                         <h4 class="font-bold text-lg text-[#5A2E0B] flex items-center gap-2"><span>🤝</span> 4. Gestión de Ventas y Operaciones (Brittany Alderete)</h4>
                         <div class="bg-[#FFF9F5] p-4 rounded-xl border border-orange-200 text-xs space-y-2">
                             <div><strong>Meta Comercial Establecida:</strong> Venta de <strong>85 postres y porciones consolidadas</strong> por semana para maximizar el margen de utilidad.</div>
-                            <div><strong>Tácticas de Venta Activa:</strong> Preventa anticipada mediante canal de WhatsApp corporativo, comercialización directa en stand durante los recesos y participación activa en la expo-venta institucional.</div>
+                            <div><strong>Tácticas de Venta Activa:</strong> Preventa anticipada mediante canal de WhatsApp corporativo, comercialización directa en stand durante los recesos y participación activa en la expo-venta institucional de San Felipe, Gto.</div>
                             <div><strong>Técnica de Cierre de Venta (Cross-selling):</strong> Implementación de la frase gatillo: <em>"Si compras 3 postres o bebidas el día de hoy, te llevas completamente gratis un sticker coleccionable exclusivo de nuestra marca"</em>.</div>
                         </div>
                     </div>
@@ -401,6 +402,38 @@
                             <div><strong>Cálculo de Utilidad Neta Semanal:</strong> $4,500.00 (Ingresos) - $3,050.00 (Costos) = <strong class="text-sm text-green-700">$1,450.00 MXN de ganancia neta libre por semana.</strong></div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contáctanos -->
+    <section id="contacto" class="py-16 px-6 max-w-4xl mx-auto">
+        <div class="bg-white p-8 md:p-10 rounded-3xl shadow-md border border-orange-100 grid md:grid-cols-2 gap-8">
+            <div class="space-y-4">
+                <span class="text-xs bg-pink-100 text-[#D94F70] font-semibold px-3 py-1 rounded-full">Comunícate</span>
+                <h2 class="text-3xl font-bold text-[#5A2E0B] mt-2">Contáctanos</h2>
+                <p class="text-gray-600 text-sm">
+                    ¿Tienes dudas sobre pedidos especiales, eventos o deseas apartar tus postres? Escríbenos o visítanos en San Felipe, Gto.
+                </p>
+                <div class="space-y-3 text-sm text-gray-700 pt-2">
+                    <p class="flex items-center gap-3"><span>📍</span> San Felipe, Gto. / Stand Escolar</p>
+                    <p class="flex items-center gap-3"><span>📱</span> WhatsApp: +52 428 000 0000</p>
+                    <p class="flex items-center gap-3"><span>✉️</span> Correo: contacto@dulcepecado.com</p>
+                    <p class="flex items-center gap-3"><span>📸</span> Instagram: @dulcepecado.postres</p>
+                </div>
+            </div>
+
+            <div class="bg-[#FFF9F5] p-6 rounded-2xl border border-orange-200 space-y-4">
+                <h3 class="font-bold text-[#5A2E0B] text-lg border-b pb-2 border-orange-200">Envíanos un Mensaje</h3>
+                <div class="space-y-3">
+                    <input type="text" id="contacto-nombre" placeholder="Tu Nombre" class="w-full px-4 py-2.5 text-sm border border-gray-300 rounded-xl focus:outline-none focus:border-[#D94F70]">
+                    <input type="email" id="contacto-email" placeholder="Tu Correo o Teléfono" class="w-full px-4 py-2.5 text-sm border border-gray-300 rounded-xl focus:outline-none focus:border-[#D94F70]">
+                    <textarea id="contacto-mensaje" rows="3" placeholder="¿En qué podemos ayudarte?" class="w-full px-4 py-2.5 text-sm border border-gray-300 rounded-xl focus:outline-none focus:border-[#D94F70]"></textarea>
+                    <button onclick="enviarMensaje()" class="w-full bg-[#D94F70] hover:bg-[#c23f5e] text-white font-medium py-3 rounded-xl transition shadow-md text-sm">
+                        Enviar Mensaje
+                    </button>
+                    <p id="contacto-exito" class="hidden text-xs text-green-700 text-center font-semibold pt-1">¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.</p>
                 </div>
             </div>
         </div>
@@ -535,6 +568,26 @@
 
             carrito = [];
             renderizarCarrito();
+        }
+
+        function enviarMensaje() {
+            const nombre = document.getElementById('contacto-nombre').value.trim();
+            const mensaje = document.getElementById('contacto-mensaje').value.trim();
+            const exitoMsg = document.getElementById('contacto-exito');
+
+            if (!nombre || !mensaje) {
+                alert("Por favor llena tu nombre y tu mensaje.");
+                return;
+            }
+
+            exitoMsg.classList.remove('hidden');
+            document.getElementById('contacto-nombre').value = '';
+            document.getElementById('contacto-email').value = '';
+            document.getElementById('contacto-mensaje').value = '';
+
+            setTimeout(() => {
+                exitoMsg.classList.add('hidden');
+            }, 4000);
         }
 
         function toggleAccesoSecreto() {
